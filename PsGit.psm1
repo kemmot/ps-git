@@ -106,7 +106,7 @@ function Get-GitLog() {
 	}
 }
 
-function Replace-GitCommit() {
+function Redo-GitCommit() {
 	Param(
 		$BranchName,
 		$NewAuthor,
