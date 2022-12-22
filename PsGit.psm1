@@ -4,7 +4,7 @@ Push-Location $path
 
 class GitOutput
 {
-	[string] $Line
+    [string] hidden $Line
 }
 
 class GitBranch : GitOutput
@@ -14,7 +14,11 @@ class GitBranch : GitOutput
     [bool]     $IsRemote
     [string]   $FullName
     [string]   $RemoteName
-	[string] $Target
+    [string] hidden $Target
+    [string]   $LastCommitSha
+    [DateTime] $LastCommitDate
+    [string]   $LastCommitName
+    [string]   $LastCommitAddress
 }
 
 class GitCommit : GitOutput
